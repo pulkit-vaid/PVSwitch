@@ -1,6 +1,6 @@
 //
 //  Switch.swift
-//  SwitchExample
+//  PVSwitch
 //
 //  Created by Pulkit Vaid on 08/02/18.
 //  Copyright © 2018 Pulkit Vaid. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-final class PVSwitch: UIControl {
+open class PVSwitch: UIControl {
 
 	@IBInspectable var thumbOnTintColor: UIColor = UIColor.green {
 		didSet {
@@ -61,7 +61,7 @@ final class PVSwitch: UIControl {
 		}
 	}
 
-	override var isEnabled: Bool {
+	override open var isEnabled: Bool {
 		didSet {
 			UIView.animate(withDuration: 0.1) {
 				self.configureThumbColors()
@@ -76,7 +76,7 @@ final class PVSwitch: UIControl {
 		self.commonInit(with: frame)
 	}
 
-	required init?(coder aDecoder: NSCoder) {
+	required public init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		self.commonInit()
 	}
@@ -93,13 +93,13 @@ final class PVSwitch: UIControl {
 	}
 
 	// MARK: - Lifecycle
-	override func layoutSubviews() {
+	override open func layoutSubviews() {
 		super.layoutSubviews()
 		self.configureTrack(frame: frame)
 		self.configureThumb(frame: frame)
 	}
 
-	override func willMove(toSuperview newSuperview: UIView?) {
+	override open func willMove(toSuperview newSuperview: UIView?) {
 		super.willMove(toSuperview: newSuperview)
 
 		// Set colors for proper positions
@@ -111,7 +111,7 @@ final class PVSwitch: UIControl {
 	}
 
 	// MARK: - Targets
-	fileprivate func addTargets() {
+	private func addTargets() {
 		self.switchThumb.addTarget(self, action: #selector(PVSwitch.onTouchDown(button:with:)), for: .touchDown)
 		self.switchThumb.addTarget(self, action: #selector(PVSwitch.onTouchUpOutsideOrCanceled(button:with:)), for: .touchUpOutside)
 		self.switchThumb.addTarget(self, action: #selector(PVSwitch.switchThumbTapped(button:with:)), for: .touchUpInside)
@@ -124,12 +124,12 @@ final class PVSwitch: UIControl {
 }
 
 //MARK: - State Change
-extension PVSwitch {
-	fileprivate func changeThumbState() {
+private extension PVSwitch {
+	private func changeThumbState() {
 		self.changeThumbState(on: !isOnPrivate, animated: true, sendAction: true)
 	}
 
-	fileprivate func changeThumbState(on: Bool, animated: Bool, sendAction: Bool) {
+	private func changeThumbState(on: Bool, animated: Bool, sendAction: Bool) {
 		self.isOnPrivate = on
 		if animated {
 			UIView.animate(withDuration: 0.15, delay: 0.05, options: .curveEaseInOut, animations: {
@@ -149,7 +149,7 @@ extension PVSwitch {
 		}
 	}
 
-	fileprivate func changeThumbPropertiesForStateChange(on: Bool, animated: Bool) {
+	private func changeThumbPropertiesForStateChange(on: Bool, animated: Bool) {
 		var thumbFrame = self.switchThumb.frame
 		thumbFrame.origin.x = on
 			? (animated ? self.thumbOnPosition + self.bounceOffset : self.thumbOnPosition)
@@ -160,7 +160,7 @@ extension PVSwitch {
 		self.configureTrackColors()
 	}
 
-	fileprivate func adjustThumbBounceOffsetForStateChange(on: Bool) {
+	private func adjustThumbBounceOffsetForStateChange(on: Bool) {
 		var thumbFrame = self.switchThumb.frame
 		thumbFrame.origin.x = on ? self.thumbOnPosition : self.thumbOffPosition
 		self.switchThumb.frame = thumbFrame
@@ -168,7 +168,7 @@ extension PVSwitch {
 }
 
 //MARK: - Thumb Drawing
-extension PVSwitch {
+private extension PVSwitch {
 	private func initThumb(frame: CGRect) {
 		self.addSubview(switchThumb)
 		self.configureThumb(frame: frame)
@@ -214,7 +214,7 @@ extension PVSwitch {
 }
 
 //MARK: - Track Drawing
-extension PVSwitch {
+private extension PVSwitch {
 	private func initTrack(frame: CGRect) {
 		self.addSubview(track)
 		self.configureTrack(frame: frame)
@@ -246,7 +246,7 @@ extension PVSwitch {
 }
 
 // MARK: - Actions
-extension PVSwitch {
+private extension PVSwitch {
 	@objc private func onTouchDown(button: UIButton, with event: UIEvent) { }
 
 	@objc private func onTouchUpOutsideOrCanceled(button: UIButton, with event: UIEvent) {
