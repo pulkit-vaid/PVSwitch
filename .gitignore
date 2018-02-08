@@ -1,0 +1,15 @@
+.DS_Store
+xcuserdata
+DerivedData
+*.xccheckout
+*.xcscmblueprint
+Carthage/Build
+fastlane/build
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/screenshots/screenshots.html
+fastlane/test_output
+fastlane/README.md
+.swiftlint.yml
+
