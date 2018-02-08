@@ -13,3 +13,6 @@ fastlane/test_output
 fastlane/README.md
 .swiftlint.yml
 *.xcuserdata
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
