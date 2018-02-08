@@ -12,4 +12,4 @@ fastlane/screenshots/screenshots.html
 fastlane/test_output
 fastlane/README.md
 .swiftlint.yml
-
+*.xcuserdata
