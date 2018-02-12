@@ -11,6 +11,18 @@ import UIKit
 @IBDesignable
 open class PVSwitch: UIControl {
 
+	@IBInspectable var isOn: Bool {
+		get {
+			return self.isOnPrivate
+		}
+		set {
+			self.changeThumbState(on: newValue, animated: false, sendAction: false)
+		}
+	}
+
+	@IBInspectable var isBounceEnabled: Bool = true
+	@IBInspectable var bounceOffset: CGFloat = 0.0
+
 	@IBInspectable var thumbOnTintColor: UIColor = UIColor.green {
 		didSet {
 			self.configureThumbColors()
@@ -21,6 +33,7 @@ open class PVSwitch: UIControl {
 			self.configureThumbColors()
 		}
 	}
+
 	@IBInspectable var trackOnTintColor: UIColor = .gray {
 		didSet {
 			self.configureTrackColors()
@@ -31,6 +44,7 @@ open class PVSwitch: UIControl {
 			self.configureTrackColors()
 		}
 	}
+
 	@IBInspectable var thumbDisabledTintColor: UIColor = .gray {
 		didSet {
 			self.configureThumbColors()
@@ -41,8 +55,6 @@ open class PVSwitch: UIControl {
 			self.configureTrackColors()
 		}
 	}
-	@IBInspectable var isBounceEnabled: Bool = true
-	@IBInspectable var bounceOffset: CGFloat = 0.0
 
 	private var thumbOnPosition: CGFloat = 0.0
 	private var thumbOffPosition: CGFloat = 0.0
@@ -51,15 +63,6 @@ open class PVSwitch: UIControl {
 	private var switchThumb = UIButton()
 
 	private var isOnPrivate: Bool = false
-
-	var isOn: Bool {
-		get {
-			return self.isOnPrivate
-		}
-		set {
-			self.changeThumbState(on: newValue, animated: false, sendAction: false)
-		}
-	}
 
 	override open var isEnabled: Bool {
 		didSet {
