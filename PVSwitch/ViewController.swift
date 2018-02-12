@@ -13,27 +13,31 @@ class ViewController: UIViewController {
 	let switchByCode = PVSwitch()
 	@IBOutlet var containerView: UIView!
 
+	@IBOutlet var disabledSwitch: PVSwitch!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.setupSwitch()
+
+		disabledSwitch.isEnabled = false
 	}
 
 	private func setupSwitch() {
 
 		//Customize the Properties if the Switch is added by Code
+
 		switchByCode.isOn = true
+		
+		switchByCode.isBounceEnabled = false		
 
-		switchByCode.isBounceEnabled = true
-		switchByCode.bounceOffset = 10.0
-
-		switchByCode.thumbOnTintColor = .green
-		switchByCode.trackOnTintColor = .lightGray
+		switchByCode.thumbOnTintColor = .white
+		switchByCode.trackOnTintColor = .green
 
 		switchByCode.thumbOffTintColor = .darkGray
 		switchByCode.trackOffTintColor = .lightGray
 
 		switchByCode.addTarget(self, action: #selector(ViewController.codeSwitchAction(sender:)), for: .valueChanged)
-		containerView.addSubview(switchByCode)
+		containerView.addSubview(switchByCode)		
 	}
 
 	override func viewDidLayoutSubviews() {

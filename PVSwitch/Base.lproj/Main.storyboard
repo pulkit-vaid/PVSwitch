@@ -18,24 +18,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXj-30-pod" customClass="PVSwitch" customModule="PVSwitch" customModuleProvider="target">
-                                <rect key="frame" x="67" y="44" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaP-B6-0NV" customClass="PVSwitch" customModule="PVSwitch" customModuleProvider="target">
+                                <rect key="frame" x="40" y="567" width="295" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="ZPe-Vo-37y"/>
+                                    <constraint firstAttribute="height" constant="80" id="bqY-em-04F"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBounceEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bounceOffset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbOnTintColor">
+                                        <color key="value" red="0.16078431372549018" green="0.71372549019607845" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackOnTintColor">
+                                        <color key="value" red="0.50588235294117645" green="0.83137254901960778" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbOffTintColor">
+                                        <color key="value" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackOffTintColor">
+                                        <color key="value" red="0.72549019609999998" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Huge Switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8z-Sq-JHb">
+                                <rect key="frame" x="146.5" y="542.5" width="82" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXj-30-pod" customClass="PVSwitch" customModule="PVSwitch" customModuleProvider="target">
+                                <rect key="frame" x="163" y="80" width="49" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="YWR-y8-g8g"/>
+                                    <constraint firstAttribute="height" constant="31" id="hQM-pf-6Ss"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="thumbOnTintColor">
-                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="thumbOffTintColor">
-                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackOnTintColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.30196078430000001" green="0.71372549019999998" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackOffTintColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.72549019609999998" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="thumbDisabledTintColor">
                                         <color key="value" cocoaTouchSystemColor="lightTextColor"/>
@@ -47,38 +80,202 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="bounceOffset">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="storyBoardSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="htX-WB-O6k"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6f-42-O2k">
-                                <rect key="frame" x="67" y="515" width="240" height="128"/>
+                                <rect key="frame" x="163" y="167" width="49" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="d7A-0U-OK2"/>
-                                    <constraint firstAttribute="height" constant="128" id="nbe-eY-PIV"/>
+                                    <constraint firstAttribute="height" constant="31" id="fEL-o6-QsQ"/>
+                                    <constraint firstAttribute="width" constant="49" id="fqd-pB-LlA"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Storyboard Switch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwn-I3-PK0">
+                                <rect key="frame" x="124" y="119" width="126.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6f-Xd-DZK" customClass="PVSwitch" customModule="PVSwitch" customModuleProvider="target">
+                                <rect key="frame" x="163" y="254" width="49" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="SOA-wj-fxZ"/>
+                                    <constraint firstAttribute="height" constant="31" id="UCC-2h-zFd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbOnTintColor">
+                                        <color key="value" red="0.90588235289999997" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbOffTintColor">
+                                        <color key="value" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackOnTintColor">
+                                        <color key="value" red="0.93725490199999995" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackOffTintColor">
+                                        <color key="value" red="0.72549019609999998" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbDisabledTintColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackDisabledTintColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBounceEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bounceOffset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="storyBoardSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="xHu-Wz-H15"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bounce On" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSW-hB-peo">
+                                <rect key="frame" x="110" y="293" width="154" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="X5l-oy-tLS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="154" id="tDD-Rm-I8h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w82-lo-ndn" customClass="PVSwitch" customModule="PVSwitch" customModuleProvider="target">
+                                <rect key="frame" x="163" y="344" width="49" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="Kf0-e5-9h9"/>
+                                    <constraint firstAttribute="height" constant="31" id="dHg-Dd-Emg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbOnTintColor">
+                                        <color key="value" red="0.99215686270000003" green="0.61568627450000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbOffTintColor">
+                                        <color key="value" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackOnTintColor">
+                                        <color key="value" red="0.95294117649999999" green="0.8980392157" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackOffTintColor">
+                                        <color key="value" red="0.72549019609999998" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbDisabledTintColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackDisabledTintColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBounceEnabled" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bounceOffset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="storyBoardSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xnh-1d-3S6"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bounce Off" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zi-u9-fMK">
+                                <rect key="frame" x="148" y="383" width="78" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tat-X9-XMu" customClass="PVSwitch" customModule="PVSwitch" customModuleProvider="target">
+                                <rect key="frame" x="163" y="431" width="49" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="24K-1c-Tv0"/>
+                                    <constraint firstAttribute="width" constant="49" id="osH-NG-eBS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbOnTintColor">
+                                        <color key="value" red="0.99215686270000003" green="0.61568627450000002" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbOffTintColor">
+                                        <color key="value" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackOnTintColor">
+                                        <color key="value" red="0.95294117649999999" green="0.8980392157" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackOffTintColor">
+                                        <color key="value" red="0.72549019609999998" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="thumbDisabledTintColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackDisabledTintColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isBounceEnabled" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bounceOffset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isOn" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="storyBoardSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Urq-W2-CHk"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disabled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjL-cS-4x0">
+                                <rect key="frame" x="157" y="470" width="60" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch added to View by Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CM-Sf-vZz">
+                                <rect key="frame" x="82" y="206" width="210" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZXj-30-pod" secondAttribute="trailing" constant="68" id="8sA-On-xXi"/>
-                            <constraint firstItem="ZXj-30-pod" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="IDQ-F2-EHo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v6f-42-O2k" secondAttribute="trailing" constant="68" id="VAx-Wr-xxx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v6f-42-O2k" secondAttribute="bottom" constant="24" id="Wzd-mi-Tug"/>
-                            <constraint firstItem="v6f-42-O2k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="YaC-62-qNI"/>
-                            <constraint firstItem="ZXj-30-pod" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="iS2-VJ-Mhn"/>
+                            <constraint firstItem="YSW-hB-peo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="01T-JE-d7L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uaP-B6-0NV" secondAttribute="bottom" constant="20" id="1SF-zy-u2I"/>
+                            <constraint firstItem="w6f-Xd-DZK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-74" id="2N5-w6-uRT"/>
+                            <constraint firstItem="v6f-42-O2k" firstAttribute="top" secondItem="kwn-I3-PK0" secondAttribute="bottom" constant="30" id="4Fs-qc-6dZ"/>
+                            <constraint firstItem="3Zi-u9-fMK" firstAttribute="top" secondItem="w82-lo-ndn" secondAttribute="bottom" constant="8" id="558-KB-Dxy"/>
+                            <constraint firstItem="3Zi-u9-fMK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6c3-RN-zbD"/>
+                            <constraint firstItem="w82-lo-ndn" firstAttribute="top" secondItem="YSW-hB-peo" secondAttribute="bottom" constant="30" id="7BZ-1F-Ua3"/>
+                            <constraint firstItem="uaP-B6-0NV" firstAttribute="top" secondItem="G8z-Sq-JHb" secondAttribute="bottom" constant="8" id="7Ix-8n-dgc"/>
+                            <constraint firstItem="1CM-Sf-vZz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Fil-Qe-DGG"/>
+                            <constraint firstItem="kwn-I3-PK0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="K0v-8J-P9l"/>
+                            <constraint firstItem="w6f-Xd-DZK" firstAttribute="top" secondItem="1CM-Sf-vZz" secondAttribute="bottom" constant="30" id="KD6-pa-5Tc"/>
+                            <constraint firstItem="w6f-Xd-DZK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KJY-Sh-t03"/>
+                            <constraint firstItem="YSW-hB-peo" firstAttribute="top" secondItem="w6f-Xd-DZK" secondAttribute="bottom" constant="8" id="Kx8-Yp-VGF"/>
+                            <constraint firstItem="RjL-cS-4x0" firstAttribute="top" secondItem="tat-X9-XMu" secondAttribute="bottom" constant="8" id="L4W-8H-APV"/>
+                            <constraint firstItem="w82-lo-ndn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="STV-mr-pc7"/>
+                            <constraint firstItem="ZXj-30-pod" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aep-WF-F2D"/>
+                            <constraint firstItem="G8z-Sq-JHb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cJO-4B-lVB"/>
+                            <constraint firstItem="v6f-42-O2k" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eVQ-xh-dcL"/>
+                            <constraint firstItem="1CM-Sf-vZz" firstAttribute="top" secondItem="v6f-42-O2k" secondAttribute="bottom" constant="8" id="hOO-jS-K2G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uaP-B6-0NV" secondAttribute="trailing" constant="40" id="jwq-cd-ekY"/>
+                            <constraint firstItem="RjL-cS-4x0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="m3C-A4-wQp"/>
+                            <constraint firstItem="tat-X9-XMu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="org-sZ-VVY"/>
+                            <constraint firstItem="RjL-cS-4x0" firstAttribute="top" secondItem="tat-X9-XMu" secondAttribute="bottom" constant="8" id="pdd-ii-C2J"/>
+                            <constraint firstItem="kwn-I3-PK0" firstAttribute="top" secondItem="ZXj-30-pod" secondAttribute="bottom" constant="8" id="rg0-Pj-NOY"/>
+                            <constraint firstItem="uaP-B6-0NV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="rmU-dS-gAc"/>
+                            <constraint firstItem="tat-X9-XMu" firstAttribute="top" secondItem="3Zi-u9-fMK" secondAttribute="bottom" constant="30" id="ygA-sO-dNK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="v6f-42-O2k" id="Cam-73-z4d"/>
+                        <outlet property="disabledSwitch" destination="tat-X9-XMu" id="Zys-b4-s55"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+            <point key="canvasLocation" x="64.799999999999997" y="-18.440779610194905"/>
         </scene>
     </scenes>
 </document>
