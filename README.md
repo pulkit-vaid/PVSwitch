@@ -17,16 +17,20 @@ This library has customizable properties that can be tweaked right from the `Sto
 <br/>
 <br/> 
 ## Installation
+* **CocoaPods** <br/>
 `PVSwitch` is available on CocoaPods.
-
 You can use this library by adding the following command onto your Podfile:
-
 ```ruby
 pod "PVSwitch"
 ```
 
+* **Manual** <br/>
+Just Drag+Drop the Source file into yor project. `PVSwitch/Source/PVSwitch.swift`
+
+
 ## Usage
 <img src="Screens/Inspectable.png" width="175" align="right" /> <br/>
+
 * **Storybord**  <br/>
 The simplest way to use `PVSwitch` is from the `Storyboard`. Just drag a view into the Storyboard and in the `Identity Inspector (⌘ ⌥ 3)` and set the `Class` field in `Custom Class` section to **PVSwitch**. 
 The storyboard refreshes itself to bring up the inspectable properties to fiddle around with. 
@@ -89,3 +93,6 @@ Pulkit Vaid
 
 ## License
 PVSwitch is available under the MIT license.
+
+### Credits
+This Switch is inspired by [JTMaterialSwitch](https://github.com/JunichiT/JTMaterialSwitch/)
