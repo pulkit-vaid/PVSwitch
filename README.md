@@ -21,7 +21,7 @@ This library has customizable properties that can be tweaked right from the `Sto
 `PVSwitch` is available on CocoaPods.
 You can use this library by adding the following command onto your Podfile:
 ```ruby
-pod "PVSwitch"
+pod 'PVSwitch'
 ```
 
 * **Manual** <br/>
